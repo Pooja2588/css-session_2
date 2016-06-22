@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+html, body, form, fieldset, legend, ol, li {
+	margin: 0;
+	padding: 0;
+}
+body {
+	
+	padding: 20px;
+}
+form {
+	
+	background-image:url(shade.jpg) center center fixed;
+	background:100%;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 20px;
+	width: 400px;
+}
+fieldset {
+	border: none;
+	margin-bottom: 10px;
+}
+legend {
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-shadow: 0 1px 1px #c0d576;
+}
+fieldset fieldset legend {
+	color: #111111;
+	font-size: 13px;
+	font-weight: normal;
+	padding-bottom: 0;
+}
+ol li {
+	background: #b9cf6a;
+	background: rgba(255,255,255,.3);
+	border-color: #e3ebc3;
+	border-color: rgba(255,255,255,.6);
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 30px;
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;
+}
+ol ol li {
+	background: none;
+	border: none;
+	float: left;
+}
+label {
+	float: left;
+	font-size: 13px;
+	width: 110px;
+}
+fieldset fieldset label {
+	background:none no-repeat left 50%;
+	line-height: 20px;
+	padding: 0 0 0 10px;
+	width: auto;
+}
+
+fieldset fieldset label:hover {
+	cursor: pointer;
+}
+textarea {
+	background: #ffffff;
+	border: none;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	font: italic 13px Georgia, "Times New Roman", Times, serif;
+	outline: none;
+	padding: 5px;
+	width: 200px;
+}
+input[type=radio] {
+	float: left;
+	margin-right: 5px;
+}
+button {
+	background: #384313;
+	border: none;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	color: #ffffff;
+	display: block;
+	font: 18px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 1px;
+	margin: auto;
+	padding: 7px 25px;
+	text-shadow: 0 1px 1px #000000;
+	text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<form id="mainform">
+<fieldset>
+<legend>Step 1 : Your details</legend>
+<ol type="1">
+<li>
+<label for="Name">Name : </label>
+<input id="name" name="name" type="text" placeholder="First and LastName"/>
+</li>
+<li>
+<label for="Email">Email : </label>
+<input id="email" name="email" type="text" placeholder="example@domain.com"/>
+</li>
+<li>
+<label for="Phone">Phone : </label>
+ <input id="phone" name="phone" type="text" placeholder="e.g +447500000000"/>
+</li>
+</ol>
+</fieldset>
+<fieldset>
+		<legend>Delivery address</legend>
+		<ol>
+			<li>
+				<label for=address>Address</label>
+				<textarea id=address name=address rows=5 required></textarea>
+			</li>
+			<li>
+				<label for=postcode>Post code</label>
+				<input id=postcode name=postcode type=text required>
+			</li>
+			<li>
+				<label for=country>Country</label>
+				<input id=country name=country type=text required>
+			</li>
+		</ol>
+	</fieldset>
+	<fieldset>
+		<legend>Card details</legend>
+		<ol>		
+			<li>
+				<fieldset>
+					<legend>Card type</legend>
+					<ol>
+						<li>
+							<input id=visa name=cardtype type=radio>
+							<img src="visa.png" height="15px" width="15px" style="float:left;"/>
+							<label for=visa>VISA</label>
+						</li>
+						<li>
+							<input id=amex name=cardtype type=radio>
+							<img src="amex.jpeg" height="15px" width="15px" style="float:left;"/>
+							<label for=amex>AmEx</label>
+						</li>
+						<li>
+							<input id=mastercard name=cardtype type=radio>
+							<img src="mastercard.png" height="15px" width="15px" style="float:left;"/>
+							<label for=mastercard>Mastercard</label>
+						</li>
+					</ol>
+				</fieldset>
+			</li>
+			<li>
+				<label for=cardnumber>Card number</label>
+				<input id=cardnumber name=cardnumber type=number required>
+			</li>
+			<li>
+				<label for=secure>Security code</label>
+				<input id=secure name=secure type=number required>
+			</li>
+			<li>
+				<label for=namecard>Name on card</label>
+				<input id=namecard name=namecard type=text placeholder="Exact name as on the card" required>
+			</li>
+		</ol>
+	</fieldset>
+	<fieldset>
+		<button type=submit>Buy it!</button>
+	</fieldset>
+</form>
+
+</body>
+</html>
